@@ -1,0 +1,12 @@
+{
+  "maximum_cash_ledger_nav_error_thb": 6.548361852765083e-11,
+  "fills_checked": 697,
+  "whole_lot_orders": true,
+  "no_same_window_sale_funding": true,
+  "saved_module_reproduces_curve": true,
+  "capital_thb": 30000,
+  "candidate": "b142b3be5b992c7b",
+  "old_integer_float_aliases_preserved_in": "research/experiments/CANDIDATE_ALIASES.json",
+  "current_engine_sha256": "160dee0fe63deae1c5363456b3ebbee36a8a7556777e702247895735f6a097ef",
+  "note": "Parameter-validation guards were added after the bounded run; independent saved-module replay reproduces the full equity curve exactly. Original run hashes remain unchanged."
+}

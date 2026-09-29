@@ -1,0 +1,55 @@
+{
+  "sma_trend": {
+    "source": "\"\"\"Slow trend baseline; hold while fast SMA exceeds slow SMA.\"\"\"\nfrom strategy.indicators import sma\n\nDEFAULTS = {\"fast\": 50, \"slow\": 200}\n\n\ndef generate_signals(prices, fast=50, slow=200):\n    if not 1 <= fast < slow:\n        raise ValueError(\"Require 1 <= fast < slow\")\n    return (sma(prices.close, fast) > sma(prices.close, slow)).astype(int)\n",
+    "defaults": {
+      "fast": 50,
+      "slow": 200
+    },
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  },
+  "rsi_pullback": {
+    "source": "\"\"\"Buy oversold pullbacks only above the long-term trend.\"\"\"\nfrom strategy.indicators import positions, rsi, sma\n\nDEFAULTS = {\"period\": 14, \"entry\": 30, \"exit\": 55, \"trend\": 200, \"max_holding\": 20}\n\n\ndef generate_signals(prices, period=14, entry=30, exit=55, trend=200, max_holding=20):\n    if not (period > 0 and trend > 0 and 0 < entry < exit < 100 and max_holding > 0):\n        raise ValueError(\"Invalid RSI parameters\")\n    value, average = rsi(prices.close, period), sma(prices.close, trend)\n    return positions((value < entry) & (prices.close > average),\n                     (value >= exit) | (prices.close < average), max_holding)\n",
+    "defaults": {
+      "period": 14,
+      "entry": 30,
+      "exit": 55,
+      "trend": 200,
+      "max_holding": 20
+    },
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  },
+  "bollinger_reversion": {
+    "source": "\"\"\"Enter after price recovers through the lower band, exit at the middle band.\"\"\"\nfrom strategy.indicators import positions, sma\n\nDEFAULTS = {\"period\": 20, \"deviations\": 2.0, \"max_holding\": 20}\n\n\ndef generate_signals(prices, period=20, deviations=2.0, max_holding=20):\n    if period < 2 or deviations <= 0 or max_holding <= 0:\n        raise ValueError(\"Invalid Bollinger parameters\")\n    mid = sma(prices.close, period)\n    lower = mid - deviations * prices.close.rolling(period).std(ddof=0)\n    enter = (prices.close.shift(1) < lower.shift(1)) & (prices.close >= lower)\n    return positions(enter, prices.close >= mid, max_holding)\n",
+    "defaults": {
+      "period": 20,
+      "deviations": 2.0,
+      "max_holding": 20
+    },
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  },
+  "macd_trend": {
+    "source": "\"\"\"MACD bullish state filtered by positive MACD and a long-term SMA.\"\"\"\nfrom strategy.indicators import ema, sma\n\nDEFAULTS = {\"fast\": 12, \"slow\": 26, \"signal\": 9, \"trend\": 200}\n\n\ndef generate_signals(prices, fast=12, slow=26, signal=9, trend=200):\n    if not (1 <= fast < slow and signal > 0 and trend > 0):\n        raise ValueError(\"Invalid MACD parameters\")\n    line = ema(prices.close, fast) - ema(prices.close, slow)\n    trigger = ema(line, signal)\n    return ((line > trigger) & (line > 0) & (prices.close > sma(prices.close, trend))).astype(int)\n",
+    "defaults": {
+      "fast": 12,
+      "slow": 26,
+      "signal": 9,
+      "trend": 200
+    },
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  },
+  "donchian_breakout": {
+    "source": "\"\"\"Close above prior channel high on elevated volume; exit below prior low.\"\"\"\nfrom strategy.indicators import positions\n\nDEFAULTS = {\"entry_window\": 55, \"exit_window\": 20, \"volume_window\": 20, \"volume_multiple\": 1.5}\n\n\ndef generate_signals(prices, entry_window=55, exit_window=20, volume_window=20, volume_multiple=1.5):\n    if min(entry_window, exit_window, volume_window) < 1 or volume_multiple <= 0:\n        raise ValueError(\"Invalid Donchian parameters\")\n    high = prices.high.rolling(entry_window).max().shift(1)\n    low = prices.low.rolling(exit_window).min().shift(1)\n    volume = prices.volume.rolling(volume_window).mean().shift(1)\n    return positions((prices.close > high) & (prices.volume > volume * volume_multiple), prices.close < low)\n",
+    "defaults": {
+      "entry_window": 55,
+      "exit_window": 20,
+      "volume_window": 20,
+      "volume_multiple": 1.5
+    },
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  },
+  "buy_hold": {
+    "source": "\"\"\"Benchmark for the same universe and execution/cost model.\"\"\"\nDEFAULTS = {}\n\n\ndef generate_signals(prices):\n    import pandas as pd\n    return pd.Series(1, index=prices.index, dtype=int)\n",
+    "defaults": {},
+    "reason": "Preserved as an audit record; original total-return results below benchmark."
+  }
+}

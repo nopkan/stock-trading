@@ -1,0 +1,13 @@
+{
+  "name": "stock-trading-local-infrastructure",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned Supabase CLI for the Mac mini audit database",
+  "scripts": {
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:status": "supabase status",
+    "db:migrate": "supabase migration up --local"
+  },
+  "devDependencies": {"supabase": "2.118.0"}
+}

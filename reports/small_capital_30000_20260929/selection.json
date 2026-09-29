@@ -1,0 +1,517 @@
+{
+  "name": "affordable_15_exit0",
+  "candidate": "b142b3be5b992c7b",
+  "parameters": {
+    "family": "capital_aware_buffered_momentum",
+    "top_n": 15,
+    "reserve": 0.1,
+    "daily_exit": 0,
+    "rank_buffer": 5,
+    "rebalance": 21,
+    "skip": 21,
+    "trend": 200,
+    "market_window": 200,
+    "min_turnover_thb": 10000000,
+    "affordability_filter": true
+  },
+  "capital_thb": 30000,
+  "research_gate_passed": true,
+  "live_ready": false,
+  "user_drawdown_limit": null,
+  "status": "experimental_strategy_only",
+  "scores": [
+    {
+      "name": "original_15",
+      "candidate": "e9a522bb24938501",
+      "passes": false,
+      "min_full_cagr": 0.02434229430190138,
+      "worst_drawdown": -0.10923379174921866,
+      "failed_cases": [
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": -0.0020869730410233434,
+          "max_drawdown": -0.10923379174921866
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": -0.0037421205735326257,
+          "max_drawdown": -0.10842787161678169
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "full",
+          "excess_cagr": -0.006637976939824153,
+          "max_drawdown": -0.0921105193351045
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": -0.01096173439012027,
+          "max_drawdown": -0.08593460821632237
+        }
+      ]
+    },
+    {
+      "name": "affordable_5_exit0",
+      "candidate": "19da3fad9eb1d863",
+      "passes": false,
+      "min_full_cagr": 0.03732526838772898,
+      "worst_drawdown": -0.41514240522426615,
+      "failed_cases": [
+        {
+          "scenario": "base",
+          "period": "full",
+          "excess_cagr": 0.012784103835759897,
+          "max_drawdown": -0.3787853177684587
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": 0.012640665547910546,
+          "max_drawdown": -0.3863695415490841
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": 0.004759181076846142,
+          "max_drawdown": -0.41514240522426615
+        },
+        {
+          "scenario": "delay_one",
+          "period": "full",
+          "excess_cagr": 0.022987025531907124,
+          "max_drawdown": -0.30554073984253394
+        },
+        {
+          "scenario": "delay_one",
+          "period": "recent",
+          "excess_cagr": -0.0018286800534010883,
+          "max_drawdown": -0.21686685243576953
+        },
+        {
+          "scenario": "morning_only",
+          "period": "full",
+          "excess_cagr": 0.007939507553085923,
+          "max_drawdown": -0.36624701333293297
+        },
+        {
+          "scenario": "morning_only",
+          "period": "recent",
+          "excess_cagr": -0.010312492979216215,
+          "max_drawdown": -0.16982874175748575
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.016432972324354145,
+          "max_drawdown": -0.3271728309783323
+        },
+        {
+          "scenario": "close_only",
+          "period": "recent",
+          "excess_cagr": -0.006436091421519352,
+          "max_drawdown": -0.18264923514622944
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "full",
+          "excess_cagr": 0.005474883546942033,
+          "max_drawdown": -0.33564783455584624
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "recent",
+          "excess_cagr": -0.01937153232755784,
+          "max_drawdown": -0.1988857993454226
+        },
+        {
+          "scenario": "phase_10",
+          "period": "full",
+          "excess_cagr": 0.05344103429621416,
+          "max_drawdown": -0.290078916771944
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.030483716581828135,
+          "max_drawdown": -0.33943303066787933
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "recent",
+          "excess_cagr": -0.008067743778149117,
+          "max_drawdown": -0.23911483701773084
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": 0.02008484690073664,
+          "max_drawdown": -0.34717267090413095
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "recent",
+          "excess_cagr": -0.0034449332294652635,
+          "max_drawdown": -0.23825592249915972
+        }
+      ]
+    },
+    {
+      "name": "affordable_5_exit3",
+      "candidate": "43dda1d1ff59253d",
+      "passes": false,
+      "min_full_cagr": 0.029882044736251334,
+      "worst_drawdown": -0.4543592432007031,
+      "failed_cases": [
+        {
+          "scenario": "base",
+          "period": "full",
+          "excess_cagr": 0.006556837471910937,
+          "max_drawdown": -0.3973631435626248
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": 0.006519930850002353,
+          "max_drawdown": -0.395899965154348
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "recent",
+          "excess_cagr": 0.01465777080084707,
+          "max_drawdown": -0.25006975465046977
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": -0.006436770410372938,
+          "max_drawdown": -0.4543592432007031
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "recent",
+          "excess_cagr": 0.009725560635073904,
+          "max_drawdown": -0.2538641958409017
+        },
+        {
+          "scenario": "delay_one",
+          "period": "full",
+          "excess_cagr": 0.01120853323047255,
+          "max_drawdown": -0.3581245210486671
+        },
+        {
+          "scenario": "morning_only",
+          "period": "full",
+          "excess_cagr": -0.00034613810143180324,
+          "max_drawdown": -0.373440312168705
+        },
+        {
+          "scenario": "morning_only",
+          "period": "recent",
+          "excess_cagr": -0.021011659341777067,
+          "max_drawdown": -0.21386944452972434
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.005049793663153945,
+          "max_drawdown": -0.3724219924301134
+        },
+        {
+          "scenario": "close_only",
+          "period": "recent",
+          "excess_cagr": -0.010897647534499066,
+          "max_drawdown": -0.22937851029700218
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "full",
+          "excess_cagr": 0.002095309153692382,
+          "max_drawdown": -0.35767388947933343
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "recent",
+          "excess_cagr": -0.025442822488935812,
+          "max_drawdown": -0.21319802222319373
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.033982540228850056,
+          "max_drawdown": -0.3265117997043606
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "recent",
+          "excess_cagr": -0.002412511296972397,
+          "max_drawdown": -0.22764472674493497
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": -0.00015403573332051224,
+          "max_drawdown": -0.4496344943050873
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "recent",
+          "excess_cagr": -0.015477132974301533,
+          "max_drawdown": -0.24993683791976384
+        }
+      ]
+    },
+    {
+      "name": "affordable_8_exit0",
+      "candidate": "fb17fdeed4ce6a69",
+      "passes": false,
+      "min_full_cagr": 0.05348542616397256,
+      "worst_drawdown": -0.3468757079382442,
+      "failed_cases": [
+        {
+          "scenario": "base",
+          "period": "full",
+          "excess_cagr": 0.04694544856903615,
+          "max_drawdown": -0.31310135563771435
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": 0.046512231500951184,
+          "max_drawdown": -0.3206597623647157
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": 0.04535879826806388,
+          "max_drawdown": -0.3468757079382442
+        },
+        {
+          "scenario": "delay_one",
+          "period": "full",
+          "excess_cagr": 0.0529450300529275,
+          "max_drawdown": -0.2643665387214398
+        },
+        {
+          "scenario": "morning_only",
+          "period": "full",
+          "excess_cagr": 0.029192158700694693,
+          "max_drawdown": -0.32348533846123284
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.04732101644966802,
+          "max_drawdown": -0.3029625613237086
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "full",
+          "excess_cagr": 0.03002893561027853,
+          "max_drawdown": -0.28453395722286146
+        },
+        {
+          "scenario": "phase_10",
+          "period": "full",
+          "excess_cagr": 0.038282071286033004,
+          "max_drawdown": -0.26166783481011846
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.04664387435807171,
+          "max_drawdown": -0.33457153061693556
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": 0.025155391915798964,
+          "max_drawdown": -0.2730634959674453
+        }
+      ]
+    },
+    {
+      "name": "affordable_8_exit3",
+      "candidate": "2ccf9e0e09d5517e",
+      "passes": false,
+      "min_full_cagr": 0.049354285914952056,
+      "worst_drawdown": -0.3648208168987338,
+      "failed_cases": [
+        {
+          "scenario": "base",
+          "period": "full",
+          "excess_cagr": 0.04944629131515921,
+          "max_drawdown": -0.3071508258696837
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": 0.04914253849111372,
+          "max_drawdown": -0.30774065245052884
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": 0.04033158915179014,
+          "max_drawdown": -0.33055397603914805
+        },
+        {
+          "scenario": "delay_one",
+          "period": "full",
+          "excess_cagr": 0.04636485412460556,
+          "max_drawdown": -0.29733039095340874
+        },
+        {
+          "scenario": "morning_only",
+          "period": "full",
+          "excess_cagr": 0.02601864116759489,
+          "max_drawdown": -0.32492750323162445
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.024569704843317774,
+          "max_drawdown": -0.3648208168987338
+        },
+        {
+          "scenario": "missed_fills",
+          "period": "full",
+          "excess_cagr": 0.03291473546150381,
+          "max_drawdown": -0.2978266541465312
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.04681072922638929,
+          "max_drawdown": -0.27356267710499127
+        },
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": 0.014050257222930407,
+          "max_drawdown": -0.29703183561297875
+        }
+      ]
+    },
+    {
+      "name": "affordable_10_exit0",
+      "candidate": "a6369aabf39ba82b",
+      "passes": false,
+      "min_full_cagr": 0.05260781527365177,
+      "worst_drawdown": -0.2862038921899914,
+      "failed_cases": [
+        {
+          "scenario": "base",
+          "period": "full",
+          "excess_cagr": 0.04653639588183589,
+          "max_drawdown": -0.2592652868976427
+        },
+        {
+          "scenario": "minimum_fee",
+          "period": "full",
+          "excess_cagr": 0.038546063706369704,
+          "max_drawdown": -0.25631316683770267
+        },
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": 0.03586765233917877,
+          "max_drawdown": -0.26859537814580936
+        },
+        {
+          "scenario": "morning_only",
+          "period": "full",
+          "excess_cagr": 0.045213216823991376,
+          "max_drawdown": -0.25328183680933647
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.047029036907983324,
+          "max_drawdown": -0.2618593289038752
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.04576626346775092,
+          "max_drawdown": -0.2862038921899914
+        }
+      ]
+    },
+    {
+      "name": "affordable_10_exit3",
+      "candidate": "6876fe6556e26470",
+      "passes": false,
+      "min_full_cagr": 0.0508955122405792,
+      "worst_drawdown": -0.27770824662418236,
+      "failed_cases": [
+        {
+          "scenario": "higher_cost",
+          "period": "full",
+          "excess_cagr": 0.03425562476920141,
+          "max_drawdown": -0.27770824662418236
+        },
+        {
+          "scenario": "delay_one",
+          "period": "full",
+          "excess_cagr": 0.03909574841647534,
+          "max_drawdown": -0.2579655823953796
+        },
+        {
+          "scenario": "close_only",
+          "period": "full",
+          "excess_cagr": 0.03650307485865345,
+          "max_drawdown": -0.27140372223140197
+        },
+        {
+          "scenario": "exclude_top3",
+          "period": "full",
+          "excess_cagr": 0.04577398288300927,
+          "max_drawdown": -0.2766079473458164
+        }
+      ]
+    },
+    {
+      "name": "affordable_15_exit0",
+      "candidate": "b142b3be5b992c7b",
+      "passes": true,
+      "min_full_cagr": 0.03821168092807303,
+      "worst_drawdown": -0.21695864513964924,
+      "failed_cases": []
+    },
+    {
+      "name": "affordable_15_exit3",
+      "candidate": "65dfb0605fd9cf3e",
+      "passes": false,
+      "min_full_cagr": 0.02547932317358015,
+      "worst_drawdown": -0.20553512906358773,
+      "failed_cases": [
+        {
+          "scenario": "exclude_complex_actions",
+          "period": "full",
+          "excess_cagr": -0.009824705518441501,
+          "max_drawdown": -0.19421174573686117
+        }
+      ]
+    }
+  ],
+  "execution_windows": [
+    "morning_ATO",
+    "afternoon_ATO",
+    "closing_ATC"
+  ],
+  "validated_price_proxy_windows": [
+    "daily_open",
+    "daily_close"
+  ],
+  "blockers": [
+    "Historical effective membership/exited stock histories missing",
+    "Afternoon and actual auction execution data missing",
+    "Historical lot/entitlement/corporate-action metadata unverified",
+    "Cash-dividend cash-flow and taxes not modeled",
+    "Fresh forward paper performance not observed",
+    "Broker and user drawdown limit not set"
+  ]
+}

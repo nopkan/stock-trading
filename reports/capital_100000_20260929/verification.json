@@ -1,0 +1,25 @@
+{
+  "ledger_replays": [
+    {
+      "candidate": "60ee10de14d6268a",
+      "fills_checked": 216,
+      "whole_lot_orders": true,
+      "no_same_window_sale_funding": true,
+      "max_nav_error_thb": 2.9103830456733704e-10,
+      "minimum_commission_topups_thb": 0.0
+    },
+    {
+      "candidate": "11577da5c7e54174",
+      "fills_checked": 214,
+      "whole_lot_orders": true,
+      "no_same_window_sale_funding": true,
+      "max_nav_error_thb": 1.7462298274040222e-10,
+      "minimum_commission_topups_thb": 0.0
+    }
+  ],
+  "cash_dividends_credited": false,
+  "initial_capital_thb": 100000,
+  "independent_cli_reproduction_matches": true,
+  "saved_strategy_module_reproduces_curve": true,
+  "pytest_tests_passed": 73
+}

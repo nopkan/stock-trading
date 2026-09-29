@@ -1,0 +1,2637 @@
+{
+  "context": "capital100k_20ffa2f729356e53",
+  "plan": {
+    "created": "2026-09-29",
+    "capital_thb": 100000,
+    "target_total_return": 3.0477,
+    "reason": "User explicitly requests a THB100,000 whole-lot strategy approaching the original +304.77% result. Existing signal ideas may be retested under this new capital context, not renamed as novel discoveries.",
+    "rankings": [
+      "multi_horizon",
+      "medium_long",
+      "risk_adjusted",
+      "high_proximity",
+      "trend_quality"
+    ],
+    "holdings": [
+      3,
+      5,
+      8,
+      10,
+      15
+    ],
+    "rebalance_sessions": [
+      10,
+      21,
+      42
+    ],
+    "daily_market_exit": [
+      0,
+      3
+    ],
+    "reserve": 0.05,
+    "rank_buffer": 5,
+    "reference_ids": [
+      "e9a522bb24938501",
+      "b142b3be5b992c7b"
+    ],
+    "full_start": "2017-01-04",
+    "recent_start": "2024-01-01",
+    "end": "2026-09-28",
+    "screen_drawdown": -0.25,
+    "shortlist": "After all 152 recipes have full/recent base runs, choose highest full return in each ranking among recipes with full/recent positive benchmark excess CAGR and DD >= -25%; if none in that ranking qualify, choose its highest full return and label failure. Also include the two highest full returns overall and both references, deduplicated. Freeze shortlist before sensitivity results.",
+    "scenarios": [
+      "higher_cost",
+      "minimum_fee",
+      "delay_one",
+      "morning_only",
+      "close_only",
+      "missed_fills",
+      "phase_half",
+      "exclude_top3",
+      "exclude_complex_actions"
+    ],
+    "selection": "Require positive excess CAGR and DD >= -25% in every full/recent evaluated scenario; among passing shortlist candidates maximize worst full-period CAGR. If none pass, report no qualifying strategy and retain highest worst full CAGR only as diagnostic. Also report largest base return regardless of risk. No expansion after seeing this batch.",
+    "exclusions": [
+      "BANPU",
+      "THAI"
+    ],
+    "execution": "Existing research.small_capital engine unchanged: no leverage, 100-share order lots, prior-close locked quantity, cash-funded purchases, daily open/close proxies, 35% funding envelope, 1% prior turnover capacity. No afternoon proxy invented. Cash dividends excluded. Price-only comparison with same-exclusion fractional basket and SET100 price.",
+    "history_status": "All dates already inspected; chronological subperiod diagnostics are not untouched out-of-sample tests. Current membership bias and unverified actions remain.",
+    "live_ready": false,
+    "user_drawdown_limit": null
+  },
+  "code_hashes": {
+    "configs/capital_100000_plan.json": "8b27390bbde52d0945174ae0550f01dbac9b2e4ab954acb9d15aa51a0db2b2bd",
+    "configs/thai_trading_costs.json": "640566d0dcbb287489465cd0ba8c0baaf3a83d150abdb4c3e357b32091900ae7",
+    "research/capital_search.py": "5edaab15ab6ad915baa02c22efbf5fa8b5129d385afe72b8d759f2995ada4c8d",
+    "research/small_capital.py": "160dee0fe63deae1c5363456b3ebbee36a8a7556777e702247895735f6a097ef",
+    "research/candidates.py": "aac524c68a34c0cee22aefebeeb2fb87510141ea9ff34088e676d094bf4a61ba",
+    "research/portfolio.py": "f89e1e3f107bf4ef96cbd07682e53bc41c2af1cd9e86223a66a9b77172c24ac9",
+    "scripts/research_capital_100000.py": "6d1d484c3d96304db69b284b2e9a7db066ed4c13adbb3407acc86b5f657702e0",
+    "data/indices/set100_tradingview_daily.csv": "711ce084262826265decc45e8dc58d15c79b3da9075aa16eeda408fb609e9c32"
+  },
+  "price_hashes": {
+    "AAV": "e2c27eada2dbe75f7c373217d5cfb784d4c697bb39c6546a4c57726f261d288a",
+    "ADVANC": "b74c5fc72b71ca07f9ff5663638a6279081b53f9095f0147b589d46e8f9fdd34",
+    "AEONTS": "a04cf74360976f41b108f71076e5a1c4e189f0168cc28bd541e0140fb9b0f697",
+    "AMATA": "4215eb3e47ba759fe5aa537d2e088de163947c4f24baccc50339f91a511fa3a7",
+    "AOT": "3bf9aca1775a291fe2eb44be3817660649918cfd4e4f86e20897da0311beb066",
+    "AP": "102aabf345e7f09f4aa90bb6f480b028c1af77961e95eb41e18eb3a0a56e74b6",
+    "AURA": "7336d2655f258b7dece2027bb72a1b8a39ab0855974abbf36e3c84be6d7f15df",
+    "AWC": "a1d49d5d0552a82b4e8f8840d59e2d87c4dc4a007b73dc8227c7ffd9a672d5e6",
+    "BA": "0a75acaf4756052b920f038a6091aa313f3b9a75e9688333b5a6aace6225a01b",
+    "BAM": "c8481f41bb088ff9964216314580fcc18ef163748cbcdf70fb4dc9e41ebf6273",
+    "BANPU": "c1d1ff0c8c7beb5d4888915177592de37c4822130ecc6b73ec20d3519b8f2e6d",
+    "BBL": "37d1bb163fdf196003b187cb7f8369b33cd35e64445ff1b4bb5aff175e3e5343",
+    "BCH": "a93f5504544362cbdeaa5caa76cbaa17b46c2104e442d2916ac759f0245ba1f7",
+    "BCP": "9669530cf9f4979a525ab93bb783ede0dbf2db42620870b7dfe9da6df128041f",
+    "BCPG": "465a6d2fe5bf40cdd77abd22e8a22c47c16c5159ff98a1e071523883a44d738b",
+    "BDMS": "32173d9bf70b7002013213ffb3b2d3a07fdf66660754b572dbb2a44eac07f38f",
+    "BEM": "297062099a21dabde8a1866e6523732f35a42c4d0ea0a57f321e5b369401e3ac",
+    "BGRIM": "3a3c767f11056389db42855a148dbf6f7e6d5b5d9c0e652386d8a514647b6cca",
+    "BH": "735732aff72f935294684c2b1441ffe538474700c37e87dd560a70757b050a1d",
+    "BJC": "a9064f3560307ce77e8109ab9cc560b623cfc42ab9d0b91893aaa99eeee0cfc2",
+    "BLA": "e33eb65a25527b6e2f7cac29eec45e4c6b8645a1758c613556dd4f8c7113587d",
+    "BTG": "6f6956eb2b5c9d8d02d434a69c332b5b1e0615507f8eee363347d2214bf3c032",
+    "BTS": "26a3d47e4f2d2d6e1ef204c1c5442e7792cf90defff4ea7e16ffc12abaa1285e",
+    "CBG": "3a488b3b0d2a491fd52662fd08ad349e68111a2b7278e67e24feffc461996a4e",
+    "CCET": "ff95c82534fe5dc7a9c401e90bacf3efe660901d76dc95b518e9d6ad3b5eac6c",
+    "CENTEL": "908e118f6dea8a00abda99546a5d78228a8531ec1244b7b76d58a6109d2ae342",
+    "CHG": "2ef536687bdb64605abe1c6809e75fcb7cf0c57742933df64f20b3cbdda03a8e",
+    "CK": "0262467fbf29565eb2419b23268d8123e307e01fb35da6eefbcbabb75556274c",
+    "COM7": "5dcd87972319351d1950797d15b05c80c5b5de4e0df2fa22072b79e6f1e6a5e3",
+    "CPALL": "6355c3529823a1e8954ec9bdb1c7f64c209b76a433a1c4b611cf0522f9b6145d",
+    "CPF": "571da9dcc8cbf98def356776bad88ac47169c52270420c70595f8f9a573873a2",
+    "CPN": "25b3e7e58aa1cab8881afe29e074943083227f4955e22bd8157fec7979901765",
+    "CRC": "aa67a12f053feb3b8c9d2c1720b69073db038c33c94cddab7a95fbfc076657fa",
+    "DELTA": "da4ef87c41a9850a72600b93e41228592fc8e5401fb96d64cb21e4727a19a10b",
+    "DOHOME": "67825c473a5f9f0f5a9e05998964e326ef91933aa30274317608483c093fad79",
+    "EA": "133144f8e700f09df9774e8f99f7c80f6b87db49d670f3d7e5271db4d53d4c33",
+    "EGCO": "9acecf7f7784e2cdc9f40970b1e27423c25dffde38d53b72ce4c7817839413eb",
+    "ERW": "ece6cfece27347eae0b125bf8ed54ab4aff259cf3dd7d2b26b876dcbc82f9d04",
+    "GFPT": "f0be7534dc102435154dc79c47df9135a3e31dd317832a61625bf570e4dfcc74",
+    "GLOBAL": "722b525a8e414998f514f1a5bb7b259d36e755adc97f62d4d7d7e7a3c5746e4c",
+    "GPSC": "d9ff89df84a823f76b546c7ed26b8e4b8b8f924789f17a16d40970889d7099d6",
+    "GST": "21fab4043009fb6bf0261cc251d702113b32eb84785a639637ec26ed1603dc45",
+    "GULF": "57298cd84c135c9573ac1d75c08173ff90a8a26eefd941315caa0c97c8666061",
+    "GUNKUL": "e9fb3db98a603e24fbf4306f25bfd22467d3a4af86bb5e5c5973d6e94d8197a9",
+    "HANA": "4a2732c2fb30c928983e5b0d0a191c7f96416904dbf91565b9d68fa093c3d79a",
+    "HMPRO": "7863223e8bd5360e9c79ffd7a3fe0299716ffedbdb4b8f209b66158c2fccfb48",
+    "ICHI": "b845a3ccdba759b4da20b8430b4a3527fbcc56a626e7d7a8ccc6cae2ffa176b0",
+    "IRPC": "1aaf51993bfb01da7846e3147e63a3527a0c6e75858b33a7c4cabfa82fab8b7c",
+    "IVL": "ebb4b17faef6bda53c47c5b705609677a403bf3181aeb693f28c691f02b7bd10",
+    "JMART": "e16236b2f610818f7f61502f6a87caef0bbb1474eb5dafb0256c1a1a1510a3d0",
+    "JMT": "141468e866a88556995e14d58154c51496f99ae485df639c153c5d36452bcf9c",
+    "KBANK": "916e62ba1a52ca8228f382fb94d36864c588d9ec87e97f2a27c926c0eabd9fe4",
+    "KCE": "3962b319ba12a6ce9b5d8174f558a40111842f0019619260fcbdb0c1d44772d1",
+    "KKP": "a480e275323e24c5a4222c19479831c891eacdab0a2d356fb6f36369267fae84",
+    "KTB": "a43d11eed91e5a3251e250aa2f90bdf19678c7eac758acdf88cce306f18d272c",
+    "KTC": "2335b4f5c128eee17b40d397705ed8df3997c2cbe9081c61be7425f5a718abbd",
+    "LH": "b84aff311d5019f8cd85c36a84b5a5b58a40ae7104899f0391c0923eee64939b",
+    "M": "1fb12eb18f672ac1737bfbab3681889a2e0ef864537c9b2fe361723e7b9fea03",
+    "MEGA": "347c71843d985df54e3eca4beae3a7c3b8a1fadb0172061708d1160217be47cc",
+    "MINT": "c827933c06bee233223bd0d20ce1da4a92ec6ca86348093998bea07153c2811c",
+    "MOSHI": "aa3514e17df6e43dc2e690728e8207269b221c09cd2176e1cd31b7afa2e64969",
+    "MRDIYT": "30f6b8356494f15b66578b23d4699ed84b0836d2103a7bfcb2cb7124f2a873ab",
+    "MTC": "2daf06800c7115333ba5f9fb773089b55dbf40d6aea1e2dc687a72c091a9f4a9",
+    "OR": "a98fe9db67770dbb2acf92d31fffe023a690abce96a64b399358b05f024dcf92",
+    "OSP": "c4facb5915183beb8004f7a8d367f350530d2668508dbfad3cc8fa601dab6995",
+    "PLANB": "8221b8e4cca0975156bc31f7ac4b14c4b4bc2d0f09e374b45f8ca6e5c4151ecb",
+    "PR9": "c21ba35bea7b18c6b23dedb5171b611183c7e794ae681501ec4064e44394d523",
+    "PRM": "c56d98f35ccb504e916ee1902500df085ebbae9e58182263190b0b4f74f2b579",
+    "PTG": "60abef92d7ff0294d6356f8682cd7e1f18441c03ff3e95fd9c6e38366fa64ff4",
+    "PTT": "82601780ad66aeacb1dede2bd3dac0748fa86b67a25d30391c8ecba9647718ac",
+    "PTTEP": "da8e7c74d144a4b1db7e97f847d935640fe14d7548f5baffb58160e29650d797",
+    "PTTGC": "2f96eb26ddcc40c1b770f048a539acc78d5e3832d1ff7ef2bbedf7928c2d83ab",
+    "QH": "3ace66ae54a83372c6db83a7246bf277d09280a54dbe1e2af0594f2a11d650a8",
+    "RATCH": "b251fa284eb577404c08a94b00fc2cc1bed1c4566c36b6ef5b456ec41636ecd9",
+    "RCL": "bf81fda0c9bccbfcdf0a001c8e456f2d3c5f43ee355022371ad64f7f5bd0517c",
+    "SAWAD": "31dc00001649c19daa1f139fdd384a9cbffbb24f34430183169c2318855df443",
+    "SCB": "a7429314a91b440ed00e3bb52460a2c2b847222945303ae8835a93c2835bf649",
+    "SCC": "911d08d6b1032128d3423c8e91286441ddaa04463b50f0fc61b0440c60d145d0",
+    "SCGP": "21084aa9133384bd3068059e40ceef3158823fc31b8a51ac1947f306e1dd6a0a",
+    "SIRI": "ce3f69ab2519a0c8b35ae885501323ba2fd166b7dd8e8c7e9ae581aa9c38dc12",
+    "SPALI": "0aff9eb16005fdfc132bd0305593114481e322327d3480228a12b988065091c6",
+    "SPRC": "083c392481f1ab6144811fa6a8cb383419b40df6ee256fd18e8062def002dbde",
+    "STA": "a45ce21cbaf0d042d51313fb72c8051911edb2dbd2bef64311e0f302c449832c",
+    "STECON": "a8401ddd9e816b13bbb52622a84b22caec5608e8e356c0650e775b514991df78",
+    "STGT": "9eb32f107d3f84c1154cbffd153bc6170aeed7923bca81193679dec617eb5f00",
+    "TASCO": "6c2e21e23c271b1c33f9e6742d94a9aa7a7427fd54ac0c6b994b9b285428e32a",
+    "TCAP": "d392b9c5364c3b6de6ca62120eeab0b44c7107380df0c3c0955bc6065e76533f",
+    "TFG": "a28dfba45c51f8c25ad6a53087292b44fc52a893758235628846695ff44d34d8",
+    "THAI": "dd27bd90aeaca4c427c131524c5343ed829ee3a49a07a4d3158222eab9382952",
+    "TIDLOR": "5793c9a22d3ac7f5fa9a58c74cf1b57752b36bc7d15dccc37b336ea5d48652c4",
+    "TISCO": "3d7955884388799fd3047d1fe136b75cafeae8b30c1b2c54d0b7cd67b05a32fe",
+    "TLI": "dfb9ad5651834887d5fa2b0e192840db887e1bdf7978d24c12ae4d8222f87e8f",
+    "TOA": "21ee25d1cce4fbfbc808fae72e7a0a30551b503289ffecc38b73d8d64189ae13",
+    "TOP": "baf7099b4338e8671522f6208a4871e21be2c61641dde04adab5f67461d8461d",
+    "TRUE": "ab0114764bea3c2acb8ca3b22730d1fe19c0d7ffa5dd58081e6e90f4b6e98705",
+    "TTB": "eee3d4a0fc83918305fc8d179d166fe26ab281b4d548c0979bd0f2878f60d7e4",
+    "TU": "2f3898fbfc50d54a494df0df9203deaf0a17d32ddb0898a0f0fca552c888ae55",
+    "VGI": "5a177ea660bb3092677c3fcb1594ec6587b627da39edfe1352abf4d18cc6b9b8",
+    "WHA": "8e56b987f7f9a2e79f8a680d7e5d5c719604068d8f67307e0b2ceeb5481ab177",
+    "WHAUP": "6aa3ad976ad3e8c4023e51123993d1f3ed1a73db40741b3158ac23c6cceabdd5"
+  },
+  "existing_recipe_ids": [
+    "b142b3be5b992c7b",
+    "e9a522bb24938501"
+  ],
+  "recipes": {
+    "6253ccd08826bdec": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "0fef6729d192c825": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "ee7526bb04a3f99c": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "c0b0ad4547efbd09": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "d65fe2d21dd044e3": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "4385dfc2c1a0808f": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "7906bb9ce1043d28": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "3f5700f31d57a686": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "ab678a9c4767fe33": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "c1f858146831d68a": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "b2fe0a6279629d1a": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "eb88a1d0e3e2a1aa": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 5,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "b30922a578a531b3": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "c69faef1c686255c": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "c83fbd730d8254f4": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "6a201c2f93ca3692": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "98787aba567141ee": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "68672504fd0e79c8": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 8,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "9480bb084ec66dc5": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "cc2ec6843ec4ffc0": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "5142cfccd2100d47": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "74836ee9189e9e5e": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "23c3dd419f5c1648": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "73981619d445161c": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 10,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "3d4a2bbce9968bb4": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "884cc89db2142238": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 10,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "d4a24b024c03879e": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "49bf78aaf5fcf6e5": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "dce4924002b50738": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "1be86f14b5b96753": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    },
+    "9bc6236be43ff10b": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2d5e97f5e78cbcf6": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "aa6704a4c9259cec": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "747f76bb76502ab1": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c12111a5bf9feaa6": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "80d32ff3dfccfd36": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "a87e7ebf3da9a3bc": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "f786142d2051ef4f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "1b7b44afaf207b6e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "5ec219cd3b27db4f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "f3666d5553d91917": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ed85990c5ed430fa": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "635674fb0e424891": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "096162757a79db9b": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "667448f7f69e7bc8": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c93b2600720afdfc": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "34eaad2b92511af9": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c11c31b6076ac92c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "439ee641401f04e0": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c49bfc4af5dd781c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "5d0d1aabdf472017": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "0940d0b35edb5969": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "03e785973c510f79": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e14f632ecfde30c1": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "14b7f4c7e6e8f91c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "74cd4c6a5cc0e5e4": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "aafa98676e21d7d8": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "bfcc8eb310511d55": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2039cb9f04417bed": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e584c0995c8de0e7": {
+      "family": "capital_ranked_momentum",
+      "ranking": "medium_long",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e6ebc33144a7a544": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "df99974c36d4d60f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "92b76ba032df401f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ae0b2550dab3307a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "122bada6de25fe10": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "5fd612349599ebb1": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "85ad45220683586c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2d1ffe152f343530": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "86c6364de5be00da": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "32304aa8d256960a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "84ae521b0adbfb77": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "78782a801441ef28": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "fa10461c3a79a6b6": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ee56dd43e37628ca": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "1838f565e482812c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "0750f8a4dd986d26": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "05932334b699020e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "d47cec1dc3fd8d22": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ffdb8797f3bf57a2": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "4f78e1e904bdc55e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "fa458d94733431ad": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ea66f7a1ef9408b2": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "9653a439ffac3239": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "95adf1bb8640d737": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "7b870c16b00e3da2": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "7b2c5e82a4606790": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "4da39b1df87d72c9": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "40c3a2e0b9158653": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "45498ffe649295a3": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "36a82e9917e427ba": {
+      "family": "capital_ranked_momentum",
+      "ranking": "risk_adjusted",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "686f6857a529cd99": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "1687740dff762623": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "a6e8e87d40591fa7": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "6977033f683e691f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "11577da5c7e54174": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "60ee10de14d6268a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "279aab0aee889478": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e505d30c0c6b462a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2905985437ebd10e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "d93074ebeac54a84": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ae2c65d221665ce2": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e6034ab52d14efa7": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e3c88aa484f3f9e0": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "fe9ecb9b1773fad2": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "4426fc551db8e6a0": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "77412813080c5f2c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "23ab49b8f9e265cd": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "4d2b15d64131c5be": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "d6811edcb0242d3d": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "776b1a9e188edbac": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e29614bca420fd10": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "95afd9f60326ea24": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "a7fd2f7b792e429e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "4ae8c0e655012800": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "cbb36b2269e28bc3": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ec22d525a8ce754f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "02d916714e612eaa": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c0363248f99c5233": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ddb6f5a9b34baae4": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c04240aef2f1e692": {
+      "family": "capital_ranked_momentum",
+      "ranking": "high_proximity",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c9fa9561cc04ca2f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "f35389a34adecccc": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "1ba96dd9896ea4c7": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e11bda6f2fa99f3e": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e9e5c71138c74967": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "82dc626fb89f1135": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 3,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "c9d7e77da027c78d": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2c1128e9b23d249f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "03d3fe6a0fc67c34": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "ded320de8100d703": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e3dc2f6972f60222": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "dbb46459b0bd21d4": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 5,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "42aeb11723e89cfc": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "7fc21aa18f17209a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "639fa32882ed80e4": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "3f7788626c6c0223": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "416c6a94210c78e4": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "45c0cf9d4246f173": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 8,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "b5c1bbed99d197e3": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "485145597ee2ca3f": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e0ed39f64b63c77a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "a056f88c6ddfd88a": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e3a8b3ac48ce2aff": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "32c6bbfe24f4099c": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 10,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "18beb6918b757ec6": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "cbd0c9e8cbbed5e1": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 10,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "7f9f81b61f56fba0": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "98aa22b8f9fa0288": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 21,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "2a73a74ec9eee356": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 0,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "42ef150df6bd7543": {
+      "family": "capital_ranked_momentum",
+      "ranking": "trend_quality",
+      "sizing": {
+        "family": "capital_aware_buffered_momentum",
+        "top_n": 15,
+        "reserve": 0.05,
+        "daily_exit": 3,
+        "rank_buffer": 5,
+        "rebalance": 42,
+        "skip": 21,
+        "trend": 200,
+        "market_window": 200,
+        "min_turnover_thb": 10000000,
+        "affordability_filter": true
+      }
+    },
+    "e9a522bb24938501": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.05,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": false
+    },
+    "b142b3be5b992c7b": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 15,
+      "reserve": 0.1,
+      "daily_exit": 0,
+      "rank_buffer": 5,
+      "rebalance": 21,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    }
+  }
+}

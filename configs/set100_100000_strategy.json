@@ -1,0 +1,37 @@
+{
+  "candidate": "60ee10de14d6268a",
+  "parameters": {
+    "family": "capital_ranked_momentum",
+    "ranking": "high_proximity",
+    "sizing": {
+      "family": "capital_aware_buffered_momentum",
+      "top_n": 3,
+      "reserve": 0.05,
+      "daily_exit": 3,
+      "rank_buffer": 5,
+      "rebalance": 42,
+      "skip": 21,
+      "trend": 200,
+      "market_window": 200,
+      "min_turnover_thb": 10000000,
+      "affordability_filter": true
+    }
+  },
+  "capital_thb": 100000,
+  "live_ready": false,
+  "status": "experimental_candidate_failed_extended_robustness",
+  "broker": null,
+  "user_drawdown_limit": null,
+  "windows": [
+    "morning_ATO",
+    "afternoon_ATO",
+    "closing_ATC"
+  ],
+  "tested_proxies": [
+    "daily_open",
+    "daily_close"
+  ],
+  "source_report": "reports/capital_100000_20260929/REPORT.md",
+  "preliminary_research_gate_passed": true,
+  "extended_robustness_passed": false
+}

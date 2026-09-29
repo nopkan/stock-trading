@@ -1,0 +1,13 @@
+{
+  "candidates": [
+    "5142cfccd2100d47",
+    "80d32ff3dfccfd36",
+    "fa458d94733431ad",
+    "11577da5c7e54174",
+    "dbb46459b0bd21d4",
+    "60ee10de14d6268a",
+    "e9a522bb24938501",
+    "b142b3be5b992c7b"
+  ],
+  "selection": "After all 152 recipes have full/recent base runs, choose highest full return in each ranking among recipes with full/recent positive benchmark excess CAGR and DD >= -25%; if none in that ranking qualify, choose its highest full return and label failure. Also include the two highest full returns overall and both references, deduplicated. Freeze shortlist before sensitivity results."
+}

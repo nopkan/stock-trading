@@ -1,0 +1,9 @@
+{
+  "exported_formula_values_checked": 421,
+  "excel_formula_errors": 0,
+  "source_hashes_verified": 6,
+  "workbook_sha256": "be3d93e59aaed99ceef01ae04969550e53cbb7998150408f4c4d3ed8b89d8ed8",
+  "annual_rows": 10,
+  "monthly_rows": 117,
+  "note": "Period compounding and fill/P&L reconciliation also asserted in analysis script."
+}

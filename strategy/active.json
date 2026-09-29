@@ -1,0 +1,82 @@
+[
+  {
+    "module": "rank_multi_horizon",
+    "family": "multi_horizon",
+    "candidate": "f4f96d173a82b60a",
+    "parameters": {
+      "lookback": 252,
+      "top_n": 20,
+      "rebalance": 21,
+      "trend": 200,
+      "market_filter": true,
+      "skip": 21,
+      "min_turnover_thb": 10000000,
+      "reserve": 0.01
+    },
+    "rule": "Rank mean percentile of skipped-month 3-, 6-, 12-month returns."
+  },
+  {
+    "module": "rank_volume_flow",
+    "family": "volume_flow",
+    "candidate": "8052992d1be308f6",
+    "parameters": {
+      "lookback": 252,
+      "top_n": 20,
+      "rebalance": 21,
+      "trend": 200,
+      "market_filter": true,
+      "skip": 21,
+      "min_turnover_thb": 10000000,
+      "reserve": 0.01
+    },
+    "rule": "Rank mean signed-volume pressure, require positive trailing return."
+  },
+  {
+    "module": "rank_consistent_trend",
+    "family": "consistent_trend",
+    "candidate": "f397049c64b94cab",
+    "parameters": {
+      "lookback": 126,
+      "top_n": 20,
+      "rebalance": 21,
+      "trend": 200,
+      "market_filter": true,
+      "skip": 21,
+      "min_turnover_thb": 10000000,
+      "reserve": 0.01
+    },
+    "rule": "Rank trailing proportion of positive sessions multiplied by momentum."
+  },
+  {
+    "module": "rank_downside_momentum",
+    "family": "downside_momentum",
+    "candidate": "bcdf16e650eee927",
+    "parameters": {
+      "lookback": 252,
+      "top_n": 20,
+      "rebalance": 21,
+      "trend": 200,
+      "market_filter": true,
+      "skip": 21,
+      "min_turnover_thb": 10000000,
+      "reserve": 0.01
+    },
+    "rule": "Rank skipped-month return / trailing downside deviation."
+  },
+  {
+    "module": "rank_high_proximity",
+    "family": "high_proximity",
+    "candidate": "48544834d3c5f35b",
+    "parameters": {
+      "lookback": 126,
+      "top_n": 10,
+      "rebalance": 63,
+      "trend": 200,
+      "market_filter": true,
+      "skip": 21,
+      "min_turnover_thb": 10000000,
+      "reserve": 0.01
+    },
+    "rule": "Rank closeness to trailing high; require positive trailing return."
+  }
+]

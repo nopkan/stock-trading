@@ -1,0 +1,7 @@
+{
+  "strategy/set100_high_proximity_100000.py": "3b521f674522ae1117dd9d4f366aaf3e72120b542952b76bd241699bcf4ec388",
+  "configs/set100_100000_strategy.json": "025eafa9a9033ddf851a2e7961f01f2836a9f1e5b0f047392d82e2f445b71853",
+  "backtest/capital_ranked.py": "841f617188165777a5d9d3af7d1ee8044897c12ea359dd141639f13738799767",
+  "scripts/audit_capital_100000.py": "4414dde41dd715d3a1ebf23553ad942f4fc027c289f53b3547ebb5b69fa8d477",
+  "scripts/report_capital_100000.py": "cac2491c0da59e4362e074440f0bb7c9f9534f3ecde78a18abede3a46370f05a"
+}

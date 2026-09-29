@@ -1,0 +1,18 @@
+{
+  "created": "2026-09-29",
+  "reason": "User requests one strategy suited to three daily auction order windows; tighten execution assumptions before deployment.",
+  "no_untouched_history": true,
+  "capital_thb_provisional": 1000000,
+  "candidate_recipes": [
+    {"name":"reference_buffer5","reserve":0.05,"market_exit_closes":0,"market_source":"equal_weight","stock_exit_closes":0},
+    {"name":"buffer10_market_exit","reserve":0.10,"market_exit_closes":3,"market_source":"equal_weight","stock_exit_closes":0},
+    {"name":"buffer10_index_exit","reserve":0.10,"market_exit_closes":3,"market_source":"SET100_price","stock_exit_closes":0},
+    {"name":"buffer10_index_stock_exit","reserve":0.10,"market_exit_closes":3,"market_source":"SET100_price","stock_exit_closes":3}
+  ],
+  "predeclared_scenarios": ["base","higher_cost","extra_day_delay","half_fills","morning_only","close_only","exclude_DELTA","exclude_RCL","phase_10"],
+  "common_exclusions": ["BANPU","THAI"],
+  "calendar": "Remove stock dates without actual SET100 index bars; missing stock sessions remain missing, not manufactured.",
+  "selection": "Reference is comparison only. A candidate must have higher full and 2024-onward CAGR than the same-exclusion basket in every scenario, and full/recent max drawdown no worse than -25% in every scenario. Among passers choose highest minimum full-period CAGR, then smallest worst drawdown. If none pass, nominate the least-bad candidate by the same score for paper-only investigation and explicitly fail the research gate. No expansion of the grid after results.",
+  "execution": "Prior-close quantities, cash funded before auction, sale proceeds available only at a later window, 35% funding envelope, per-window capacity limited to 1% of preceding daily turnover. Daily open and close are proxies; afternoon auction and real auction liquidity are unavailable. Fractional adjusted units remain a limitation.",
+  "live_readiness": "Historical performance cannot pass live readiness alone. Verified point-in-time membership, complete auction data and corporate actions, broker sandbox, lot/fee metadata, user capital/risk limits, and fresh forward paper operation remain necessary."
+}

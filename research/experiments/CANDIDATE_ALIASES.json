@@ -1,0 +1,4 @@
+{
+  "reason": "The first auction-proxy run serialized 10000000.0 instead of 10000000, producing alternate IDs for equivalent recipes. Historical records remain preserved; these aliases are not new hypotheses.",
+  "aliases": {"2cf550d27fd7a786":"e9a522bb24938501","7e75643d3b2a80cb":"8d4dd4ad33e398f9"}
+}

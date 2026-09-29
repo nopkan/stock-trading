@@ -1,0 +1,61 @@
+{
+  "candidate": "7e75643d3b2a80cb",
+  "name": "buffer10_market_exit",
+  "parameters": {
+    "top_n": 15,
+    "rank_buffer": 5,
+    "reserve": 0.1,
+    "market_exit_closes": 3,
+    "market_source": "equal_weight",
+    "stock_exit_closes": 0,
+    "rebalance": 21,
+    "market_window": 200,
+    "stock_window": 200,
+    "skip": 21,
+    "min_turnover_thb": 10000000.0
+  },
+  "research_gate_passed": true,
+  "live_ready": false,
+  "mode": "paper_only",
+  "scores": [
+    {
+      "name": "reference_buffer5",
+      "candidate": "2cf550d27fd7a786",
+      "passed_research_hurdle": true,
+      "min_full_cagr": 0.1293359306877644,
+      "worst_drawdown": -0.14545816969600556,
+      "failed_scenarios": []
+    },
+    {
+      "name": "buffer10_market_exit",
+      "candidate": "7e75643d3b2a80cb",
+      "passed_research_hurdle": true,
+      "min_full_cagr": 0.10734865852587494,
+      "worst_drawdown": -0.19178078763427597,
+      "failed_scenarios": []
+    },
+    {
+      "name": "buffer10_index_exit",
+      "candidate": "1dbfea6883ce22aa",
+      "passed_research_hurdle": true,
+      "min_full_cagr": 0.08093719089183149,
+      "worst_drawdown": -0.23327554623993696,
+      "failed_scenarios": []
+    },
+    {
+      "name": "buffer10_index_stock_exit",
+      "candidate": "303e1da0c09218de",
+      "passed_research_hurdle": true,
+      "min_full_cagr": 0.07988087561844304,
+      "worst_drawdown": -0.22927448902787606,
+      "failed_scenarios": []
+    }
+  ],
+  "live_blockers": [
+    "Complete point-in-time membership and exiting/delisted histories unavailable",
+    "Actual morning/afternoon/closing auction prices, volumes, indicative snapshots and eligibility unavailable",
+    "Broker, capital and user risk preferences unconfirmed",
+    "Historical real-share corporate actions, dividends and lot metadata not validated",
+    "Fresh forward paper performance and broker fault/partial-fill reconciliation not observed"
+  ]
+}

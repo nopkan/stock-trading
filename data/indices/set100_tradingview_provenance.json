@@ -1,0 +1,40 @@
+{
+  "retrieved": "2026-09-29",
+  "source": "https://www.tradingview.com/symbols/SET-SET100/",
+  "transport": "Public unauthenticated TradingView chart stream, SET:SET100, daily, 5000 bars",
+  "series": "SET100 price index, not SET100FF, not TRI; excludes dividends; index has no execution costs",
+  "downloaded_last_date": "2026-09-29",
+  "retained_last_date": "2026-09-28",
+  "retained_first_date": "2006-01-31",
+  "baseline_date": "2016-12-30",
+  "checkpoint_sources": [
+    "https://www.ivglobal.co.th/uploads/research/260105.pdf",
+    "https://www.investing.com/indices/set-100-historical-data"
+  ],
+  "checks": "2024-12-30=1959.79; 2025-12-30=1788.35; 2026-09-28=2317.78. All month/year boundaries have observed index closes.",
+  "holiday_marks": [
+    "2026-05-01",
+    "2026-05-04",
+    "2026-06-01",
+    "2026-06-03",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-08-12"
+  ],
+  "holiday_method": "Seven zero-volume Yahoo holiday rows remain in frozen strategy calculations; index prior close carried only on these verified SET closures, no strategy fills on them. They can still affect indicator/rebalance session counting. Model sessions include these rows.",
+  "holiday_source": "https://www.set.or.th/en/about/event-calendar/holiday",
+  "missing_stock_calendar_dates": [
+    "2017-01-13",
+    "2024-01-02"
+  ],
+  "missing_stock_calendar_method": "2017-01-13 and 2024-01-02 have observed index bars but no panel stock observations. Frozen portfolio values are carried only for the comparison chart and flagged portfolio_observed=False. No new bars/trades invented. Full actual index calendar is used for index drawdown.",
+  "TRI_status": "Full SET100 TRI history could not be retrieved from public sources; not estimated or substituted.",
+  "sha256": {
+    "data/sources/index_research/tradingview_set100_frames.json": "0a1ef620c5ac9f23ee24740d7ca5e289c3f54cd9e168c7f722db083e7583e207",
+    "data/indices/set100_tradingview_daily.csv": "711ce084262826265decc45e8dc58d15c79b3da9075aa16eeda408fb609e9c32",
+    "reports/momentum_reserve_20260929/e9a522bb24938501/full_base_equity.csv": "dc130acd42c6a027f617a65e49ac7b5c8199161f6ee5811b5feca548de996863",
+    "reports/momentum_reserve_20260929/benchmark_full_base.csv": "37638c8a92f94ee3290cbad82fac89aa0d6d6fada57fd1c0dffa8305a2dfddca",
+    "reports/momentum_reserve_20260929/e9a522bb24938501/full_base_fills.csv": "4e5d97a3f586d9a9cfff7f4f18faf424c27a390bfbc3989758a3b2d2dfe1b75f",
+    "configs/thai_trading_costs.json": "640566d0dcbb287489465cd0ba8c0baaf3a83d150abdb4c3e357b32091900ae7"
+  }
+}

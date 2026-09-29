@@ -1,0 +1,14 @@
+{
+  "candidate": "60ee10de14d6268a",
+  "capital_thb": 100000,
+  "numerical_base_target_met": true,
+  "preliminary_shortlist_screen_passed": true,
+  "extended_robustness_passed": false,
+  "live_ready": false,
+  "status": "experimental_candidate_failed_extended_robustness",
+  "reason": "Strong dependence on rebalance offset and three profit contributors; no untouched history or verified auction data.",
+  "base_return": 5.651537293849958,
+  "base_drawdown": -0.1661626975494482,
+  "phase_median_return": 1.3337026373135845,
+  "phase_worst_drawdown": -0.581284791879374
+}

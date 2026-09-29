@@ -1,0 +1,252 @@
+{
+  "retrieved_at_utc": "2026-09-29T06:37:12.299113+00:00",
+  "listing_url": "https://www.set.or.th/en/market/information/securities-list/constituents-list-set50-set100",
+  "membership_type": "snapshots_not_effective_intervals",
+  "sources": [
+    {
+      "url": "https://media.set.or.th/set/Documents/2026/Jul/SET50_SET100_H2_2026_revise.pdf",
+      "file": "data/sources/SET50_SET100_H2_2026_revise.pdf",
+      "sha256": "62ceed0057da963d96023d8ac952783935dc40018b90871b91b453712b58072d",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2026/Jun/SET50-SET100-H2-2026.pdf",
+      "file": "data/sources/SET50-SET100-H2-2026.pdf",
+      "sha256": "a9bff8e6a2fd1e86d2449c1f3eaac534053aecfb74b9649f5626e000d10f7eb2",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2025/Dec/SET50_100_H1_2026.pdf",
+      "file": "data/sources/SET50_100_H1_2026.pdf",
+      "sha256": "9e07244ef3aca2929100a36c2e9c2384533624a22560f6149dc23201cd3f1699",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2025/Jun/SET50_100_H2_2025.pdf",
+      "file": "data/sources/SET50_100_H2_2025.pdf",
+      "sha256": "fe5cd79f32a8f19b371f626cfa156017e27f5eaff8eeb48c87d410ac092311f9",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2025/Feb/SET50_100_H1_2025_revise.pdf",
+      "file": "data/sources/SET50_100_H1_2025_revise.pdf",
+      "sha256": "7ac74fe07b2a80f81c751d9f3181bd4d0cff05b88613cc935380eaa1a5a44b39",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2024/Dec/SET50_100_H1_2025.pdf",
+      "file": "data/sources/SET50_100_H1_2025.pdf",
+      "sha256": "6d62722ac854ead3b5980fc74bebb810891be852fca2c49e710cb874d9c34c24",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2024/Jun/SET50_100_H2_2024.pdf",
+      "file": "data/sources/SET50_100_H2_2024.pdf",
+      "sha256": "b2a39cd7fb36e8a1b878f52b7fd0d4a16f45d2d77550d8c2c040780d95bc2e73",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2023/Dec/SET50_100_H1_2024.pdf",
+      "file": "data/sources/SET50_100_H1_2024.pdf",
+      "sha256": "992c7abbcbc334cbd1bbe0a7707c33f8ea500582459175f9fdf03041929062ff",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2023/Jun/SET50-SET100_H2_2023.pdf",
+      "file": "data/sources/SET50-SET100_H2_2023.pdf",
+      "sha256": "5b9401954659e85160750d60b852f84f2c157228aa380fb5e68ce3d27374c733",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2023/Mar/SET50SET100_H1_2023_revise.pdf",
+      "file": "data/sources/SET50SET100_H1_2023_revise.pdf",
+      "sha256": "67270ac747ed621fc33d66fc6bd0e47707871c7a103af17d8efcc2f71998f032",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Dec/SET50_100_H1_2023.pdf",
+      "file": "data/sources/SET50_100_H1_2023.pdf",
+      "sha256": "d71f597c8096fdef9a30cc736380f7f2af0a8a7e0b270123781d67e7eba887b8",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Jun/SET50_SET100_H2_2022.pdf",
+      "file": "data/sources/SET50_SET100_H2_2022.pdf",
+      "sha256": "398860f192702905581b80c75277d80777250853405fc5cf652efda938f9aa5e",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H1_2022.pdf",
+      "file": "data/sources/SET50_100_H1_2022.pdf",
+      "sha256": "d500b3bf5854cbb227bdff3c060e137630ccb560d7821cb29259a4eceac7d852",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H2_2021V2-27082030.pdf",
+      "file": "data/sources/SET50_100_H2_2021V2-27082030.pdf",
+      "sha256": "bffe231e4da92d30663d023e2496f57f9a1a2111d39d4a2ba3f73192a482370e",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H1_2021_revised-27082138.pdf",
+      "file": "data/sources/SET50_100_H1_2021_revised-27082138.pdf",
+      "sha256": "35a63c94fe1794b96a8485f24c8b8dab2c1221846a434e1e330e4c9194951191",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H1_2021-27082230.pdf",
+      "file": "data/sources/SET50_100_H1_2021-27082230.pdf",
+      "sha256": "e1e9ad91002895e305dc55929642c397281dad595080a834171e076128dbc53e",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H2_2020_revised-27082322.pdf",
+      "file": "data/sources/SET50_100_H2_2020_revised-27082322.pdf",
+      "sha256": "69b1295d712837674c447f88f3db0f0d52371d071f87b419094c0f56f11e4ae6",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H2_2020-27082452.pdf",
+      "file": "data/sources/SET50_100_H2_2020-27082452.pdf",
+      "sha256": "e129c9a18f979a298843f62db7494c22a82f4b6fb7fc716edd3b018e041a2b35",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H1_2020_revised-27082541.pdf",
+      "file": "data/sources/SET50_100_H1_2020_revised-27082541.pdf",
+      "sha256": "221ba32e0d8a43ee3f94a2e2880e028c0c310f5725ec1013ff988b38d9ec1b8d",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2022/Apr/SET50_100_H1_2020-27082646.pdf",
+      "file": "data/sources/SET50_100_H1_2020-27082646.pdf",
+      "sha256": "df1174414c67bf743af14ff1afe84133e570d4ebdb58f4e9227288c7001c27bb",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2019_revised.pdf",
+      "file": "data/sources/SET50_100_H2_2019_revised.pdf",
+      "sha256": "7b5a46eaa836a5e959a298fbdecf2beed5443b992dbec66ec24e28e363dd1b92",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2019.pdf",
+      "file": "data/sources/SET50_100_H2_2019.pdf",
+      "sha256": "f80d67b2652a118db09539742a128acbead43d5ce5173a9a8116d5b48f2fb4ee",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2019_revised.pdf",
+      "file": "data/sources/SET50_100_H1_2019_revised.pdf",
+      "sha256": "76620d49a71e1077f7d27b1b48d98570cbf616091aa4b05af724ff2176871276",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2019.pdf",
+      "file": "data/sources/SET50_100_H1_2019.pdf",
+      "sha256": "c8574cb3708db00c3565900d4014b5e630747a00a57cc15fe55f6540cc1d18dd",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2018.pdf",
+      "file": "data/sources/SET50_100_H2_2018.pdf",
+      "sha256": "a4d43c00a8d0dee769840eb19cd9748ad094211bed397983648e3be75f87d754",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2018.pdf",
+      "file": "data/sources/SET50_100_H1_2018.pdf",
+      "sha256": "6af0b1b9370c55c7d96ec4d76847e3a82c79f01721bb88df1bd795092a921fdd",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2017.pdf",
+      "file": "data/sources/SET50_100_H2_2017.pdf",
+      "sha256": "a22c7a7841202f2ff4a209dcc6e2b9a34d658bdf678c9a0219a0b8fb7ba39165",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2017_v2.pdf",
+      "file": "data/sources/SET50_100_H1_2017_v2.pdf",
+      "sha256": "7a6d661187ea387b66e756454a626d9c72f574d538f230ab44b7b609560f9171",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2016-PSH.pdf",
+      "file": "data/sources/SET50_100_H2_2016-PSH.pdf",
+      "sha256": "87ee0a3475c180fec36c02e4121778736127cfd44380f667bf5985b039e8667a",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2016.pdf",
+      "file": "data/sources/SET50_100_H2_2016.pdf",
+      "sha256": "88b9aa50e4a71a86d6db2cd208f2958177ffdbfa363395915cacded210fcec95",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2016-Merger.pdf",
+      "file": "data/sources/SET50_100_H1_2016-Merger.pdf",
+      "sha256": "3d0cc22c17fbe193e4afb6a45b54ec96cd103d832f95be7ac16efad7b3532911",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2016.pdf",
+      "file": "data/sources/SET50_100_H1_2016.pdf",
+      "sha256": "9fabdbf92426214bfe3f328e60333a9cf176ab6f535ae59039590669b9feec24",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H2_2015.pdf",
+      "file": "data/sources/SET50_100_H2_2015.pdf",
+      "sha256": "4eeca70c9a7f6c32be29bf826012cc8ae0853d92e2d1104cefb543bd2c6ca6d4",
+      "status": "ok",
+      "constituents": 100
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2015-Update-HEMRAJ-Out.pdf",
+      "file": "data/sources/SET50_100_H1_2015-Update-HEMRAJ-Out.pdf",
+      "sha256": "4104ae7690b93440eb36248869e6e05f95b11231c85759785647438311273b4f",
+      "status": "error",
+      "error": "Expected 100 numbered rows, extracted 99: SET50_100_H1_2015-Update-HEMRAJ-Out.pdf"
+    },
+    {
+      "url": "https://media.set.or.th/set/Documents/2021/Dec/SET50_100_H1_2015.pdf",
+      "file": "data/sources/SET50_100_H1_2015.pdf",
+      "sha256": "664768e2634a8cf41bda62d7f5be22c9e80820144212d7a4b8e4f04f79911b45",
+      "status": "error",
+      "error": "Expected 100 numbered rows, extracted 99: SET50_100_H1_2015.pdf"
+    }
+  ]
+}

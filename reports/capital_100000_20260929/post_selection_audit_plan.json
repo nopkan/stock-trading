@@ -1,0 +1,68 @@
+{
+  "purpose": "Additional diagnostics after frozen selection, no reselection",
+  "candidate": "60ee10de14d6268a",
+  "rebalance_phases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "exclude_actual_profit_leaders": [
+    "RCL",
+    "JMART",
+    "STECON"
+  ],
+  "cold_start_blocks": [
+    [
+      "2017-01-04",
+      "2019-12-31"
+    ],
+    [
+      "2020-01-01",
+      "2023-12-31"
+    ],
+    [
+      "2024-01-01",
+      "2026-09-28"
+    ]
+  ],
+  "all_history_previously_seen": true
+}

@@ -1,0 +1,27 @@
+{
+  "strategy_module": "strategy.set100_small_capital",
+  "candidate": "b142b3be5b992c7b",
+  "capital_thb": 30000,
+  "status": "experimental_strategy_selected_not_live_ready",
+  "live_enabled": false,
+  "broker": null,
+  "user_max_drawdown": null,
+  "parameters": {"top_n":15,"reserve":0.10,"daily_exit":0,"rank_buffer":5,"rebalance":21,"affordability_filter":true},
+  "desired_execution_windows_bangkok": [
+    {"name":"morning_ATO","check_from":"09:45","submit_before":"09:55","purpose":"Apply previous completed-day signal; lock quantities for the day"},
+    {"name":"afternoon_ATO","check_from":"13:45","submit_before":"13:55","purpose":"Reconcile confirmed morning fills; retry valid residuals using confirmed cash"},
+    {"name":"closing_ATC","check_from":"16:30","submit_before":"16:35","purpose":"Final same-day residual/risk check using information available before auction"}
+  ],
+  "rules": [
+    "Three opportunities to act, not three mandatory trades",
+    "ATO/ATC require verified exchange pre-auction state and broker order support; never submit a late ATO",
+    "Daily final close cannot be used for that same closing auction",
+    "All lot sizes, availability, action-adjusted reference prices and buying power must come from current broker/exchange metadata",
+    "Sale proceeds cannot finance buys in the same auction; only confirmed later available buying power may be used",
+    "Residuals must be reconciled with actual fills/cancellations before retry; intent IDs must prevent duplicate submission",
+    "No fixed stop-loss is included in the selected performance. A portfolio halt threshold remains to be agreed and tested",
+    "Corporate-action odd lots need a separate exit process; auction-only liquidation may leave residual holdings"
+  ],
+  "validated": {"completed_daily_signal_logic":true,"daily_open_close_price_proxy":true,"afternoon_auction":false,"actual_auction_liquidity":false,"live_order_routing":false},
+  "report": "reports/small_capital_30000_20260929/REPORT.md"
+}

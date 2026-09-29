@@ -1,0 +1,12 @@
+{
+  "researched_on": "2026-09-29",
+  "description": "Representative published online cash-balance rate, not a statistical market-wide average. Constant present-day assumptions applied to history.",
+  "base": {"commission_bps": 15.0, "exchange_bps": 0.5, "clearing_bps": 0.1, "regulatory_bps": 0.1, "vat": 0.07, "slippage_bps": 10.0, "minimum_daily_commission_thb": 0.0},
+  "stress": {"commission_bps": 25.0, "exchange_bps": 0.5, "clearing_bps": 0.1, "regulatory_bps": 0.1, "vat": 0.07, "slippage_bps": 20.0, "minimum_daily_commission_thb": 50.0},
+  "initial_capital_thb": 1000000.0,
+  "sources": [
+    {"broker": "Kasikorn Securities", "url": "https://www.kasikornsecurities.com/en/startinvesting/fee/thai-stocks", "observation": "Online cash balance <= THB5m daily: 0.15% commission; trading 0.005%, clearing 0.001%, regulatory 0.001%; VAT 7%. Zero-minimum option described."},
+    {"broker": "DBS Vickers Thailand", "url": "https://login.settrade.com/brokerpage/004/web/Commission-General.html", "observation": "Online cash balance <= THB5m daily commission 0.15%; account conditions/minimums vary."},
+    {"broker": "Bualuang Securities", "url": "https://www.bualuang.co.th/article/whychoosebualuangsecurities", "observation": "Published 0.157% trading fee plus VAT7%, matching the representative all-in rate before slippage."}
+  ]
+}

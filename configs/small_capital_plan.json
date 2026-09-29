@@ -1,0 +1,20 @@
+{
+  "created": "2026-09-29",
+  "capital_thb": 30000,
+  "reason": "User specified THB30,000 and strategy-first scope. Prior THB1m fractional-unit results cannot establish suitability. Bounded capital-aware comparison, not an untouched test.",
+  "holdings_grid": [5,8,10,15],
+  "market_exit_grid": [0,3],
+  "reserve": 0.10,
+  "rank_buffer": 5,
+  "rebalance": 21,
+  "reference": {"top_n":15,"reserve":0.05,"daily_exit":0},
+  "scenarios": ["base","minimum_fee","higher_cost","delay_one","morning_only","close_only","missed_fills","phase_10","exclude_top3","exclude_complex_actions"],
+  "common_exclusions": ["BANPU","THAI"],
+  "lot_assumption": "100-share order multiples for every stock. Conservative proxy, not historical lot metadata. Split/stock-dividend residuals cannot be sold at auctions and remain explicitly marked.",
+  "price_model": "Reverse provider split-adjusted quotes using reported subsequent split ratios. No missing price invented. Provider action classifications and entitlement dates remain unverified. Cash dividends are excluded from strategy and basket P&L: price-only analysis, not the earlier dividend-adjusted return.",
+  "selection": "No expansion after results. Compare all nine recipes including reference. Require full and recent excess CAGR over same-cost fractional price-only basket in all scenarios, worst full/recent drawdown no worse than -25%. Among passing recipes maximize worst full-period CAGR; tie-break by smaller worst drawdown. If none pass, choose by same score as experimental candidate and explicitly fail research readiness. This research screen is not the user's personal drawdown limit.",
+  "benchmark": "Friction-adjusted fractional equal-initial-sleeve price-only basket; same common exclusions, no dividends, no rebalancing. Fractional baseline is a comparison, not investable with THB30,000. Also show actual SET100 price index separately.",
+  "execution": "Only daily open/close proxies available, afternoon not synthesized. Prior-close quantities locked for the day; no same-auction sale funding; 35% cash funding envelope; 1% preceding daily turnover capacity; residuals may retry at close then expire. No terminal liquidation assumed.",
+  "user_max_drawdown": null,
+  "live_enabled": false
+}
