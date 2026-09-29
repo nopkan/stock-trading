@@ -20,7 +20,7 @@ npm ci --ignore-scripts
 .venv/bin/python -m pytest -q
 ```
 
-Install/start Docker Desktop on the Mac mini if it is not already running. The three database integration
+Install/start Docker Desktop on the Mac mini if it is not already running. The four database integration
 tests skip without a disposable test database; GitHub CI runs them against PostgreSQL 17. Never point
 `STOCK_TEST_DATABASE_URL` at an audit database you want to preserve.
 

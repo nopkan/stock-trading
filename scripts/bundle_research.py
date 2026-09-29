@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import sqlite3
 import tarfile
@@ -24,6 +25,7 @@ def create_bundle(output, root=ROOT):
             with sqlite3.connect(f'file:{database}?mode=ro',uri=True) as source,sqlite3.connect(copied) as target: source.backup(target)
             extra=[(copied,'research/experiments/registry.sqlite3')]
         with tarfile.open(output,'x:gz') as archive:
+            os.chmod(output,0o600)
             for path,name in [(p,str(p.relative_to(root))) for p in paths]+extra:
                 content=path.read_bytes();info=tarfile.TarInfo(name);info.size=len(content);info.mode=0o600
                 archive.addfile(info,io.BytesIO(content))
@@ -61,6 +63,7 @@ def restore_bundle(bundle, root=ROOT):
             if path.exists(): continue
             path.parent.mkdir(parents=True,exist_ok=True)
             with path.open('xb') as out: out.write(archive.extractfile(name).read())
+            path.chmod(0o600)
     return {'verified_files':len(entries),'destination':str(root)}
 
 

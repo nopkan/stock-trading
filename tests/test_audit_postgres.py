@@ -51,3 +51,14 @@ def test_owner_cannot_accidentally_mutate_history(db):
     with psycopg.connect(URL) as conn:
         AuditStore(conn).event(str(uuid.uuid4()),'owner-check',{})
         with pytest.raises(psycopg.Error),conn.transaction(): conn.execute('UPDATE trading.audit_events SET kind=kind')
+
+
+def test_chain_verifier_detects_payload_column_tampering(db):
+    with psycopg.connect(URL) as conn:
+        event_id=AuditStore(conn).event(str(uuid.uuid4()),'tamper-check',{'quantity':100})
+        with pytest.raises(RuntimeError),conn.transaction():
+            # Only a superuser can do this. Roll back the entire diagnostic.
+            conn.execute('SET LOCAL session_replication_role=replica')
+            conn.execute("UPDATE trading.audit_events SET payload='{}' WHERE id=%s",(event_id,))
+            assert not conn.execute('SELECT valid_hash FROM trading.audit_chain_health WHERE id=%s',(event_id,)).fetchone()[0]
+            raise RuntimeError('rollback diagnostic')

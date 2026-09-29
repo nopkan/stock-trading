@@ -122,7 +122,10 @@ REVOKE ALL ON FUNCTION trading.immutable_row() FROM PUBLIC;
 CREATE VIEW trading.audit_chain_health AS
 SELECT id,
   previous_hash=coalesce(lag(event_hash) OVER (ORDER BY id),repeat('0',64)) AS linked,
-  event_hash=encode(extensions.digest(convert_to(previous_hash||envelope::text,'UTF8'),'sha256'),'hex') AS valid_hash
+  event_hash=encode(extensions.digest(convert_to(previous_hash||envelope::text,'UTF8'),'sha256'),'hex')
+    AND envelope->>'key'=event_key AND envelope->>'kind'=kind
+    AND envelope->>'actor'=actor AND envelope->'payload'=payload
+    AND (envelope->>'occurred_at')::timestamptz=occurred_at AS valid_hash
 FROM trading.audit_events;
 GRANT SELECT ON trading.audit_chain_health TO stock_app;
 COMMENT ON SCHEMA trading IS 'Stock research and execution audit; append-only for application role. Database owner can still alter schema; external backups are required.';
